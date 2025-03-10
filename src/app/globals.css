@@ -4,6 +4,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --color-theme: #e4fde1;
+  --color-theme-text: #1a472a;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
