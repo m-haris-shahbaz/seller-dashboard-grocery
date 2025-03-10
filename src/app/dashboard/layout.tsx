@@ -28,7 +28,7 @@ export default function DashboardLayout({
             GrocerySeller
           </Link>
         </div>
-        <div className="flex-1 px-3 py-2">
+        <div className="flex-1 w-full py-10">
           <DashboardNav />
         </div>
         <div className="p-4 border-t border-slate-200">
