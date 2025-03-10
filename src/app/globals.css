@@ -148,4 +148,31 @@
   body {
     @apply bg-background text-foreground;
   }
+  :root {
+    --theme: 220 70% 50%;
+    --theme-text: 0 0% 100%;
+  }
+
+  /* Animation keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+}
+
+/* Add smooth transitions to inputs and interactive elements */
+input,
+button,
+a {
+  transition: all 0.2s ease;
 }

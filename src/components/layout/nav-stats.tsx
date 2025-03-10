@@ -25,6 +25,16 @@ export default function SellerStats() {
       icon: <Wallet size={22} />,
     },
   };
+
+  const formatStatValue = (key: string, value: number) => {
+    if (key === "satisfactionRating") {
+      return value.toFixed(1); // Always show one decimal place
+    } else if (key === "balance") {
+      return `$${value.toLocaleString("en-US")}`; // Format as currency
+    }
+    return value.toString(); // Convert numbers to strings for consistent rendering
+  };
+
   return (
     <div className="flex justify-between items-center gap-5">
       <div className="flex flex-col mr-5">
@@ -57,7 +67,9 @@ export default function SellerStats() {
             </div>
             <div>
               <p className="text-xs text-slate-500">{stat.label}</p>
-              <p className="text-sm font-medium">{stat.value}</p>
+              <p className="text-sm font-medium">
+                {formatStatValue(key, stat.value)}
+              </p>
             </div>
           </div>
         ))}
