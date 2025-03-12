@@ -32,7 +32,7 @@ export function DashboardNav({ className }: { className?: string }) {
   const pathname = usePathname();
 
   return (
-    <nav className={cn("flex flex-col space-y-3 justify-center", className)}>
+    <nav className={cn("flex flex-col space-y-1 justify-center", className)}>
       {navItems.map((item) => {
         const isActive = pathname === item.href;
         const Icon = item.icon;
@@ -47,7 +47,7 @@ export function DashboardNav({ className }: { className?: string }) {
           >
             <div
               className={`p-2 ${
-                isActive ? " bg-theme-text text-white" : "bg-theme"
+                isActive ? " bg-theme text-black" : ""
               } rounded-lg`}
             >
               <Icon className="h-4 w-4" />
@@ -57,7 +57,7 @@ export function DashboardNav({ className }: { className?: string }) {
         );
       })}
 
-      <span className="uppercase px-5 py-1 text-xs text-gray-600">Support</span>
+      <span className="uppercase px-5 py-2 text-xs text-gray-600">Support</span>
       {supportItems.map((item) => {
         const isActive = pathname === item.href;
         const Icon = item.icon;
@@ -67,7 +67,7 @@ export function DashboardNav({ className }: { className?: string }) {
             href={item.href}
             className={cn(
               "flex items-center gap-3 px-5 py-2 text-sm font-medium transition-all hover:bg-slate-100",
-              isActive ? "bg-slate-100 text-theme-text" : "text-slate-500"
+              isActive ? "bg-green-100 text-theme-text" : "text-slate-500"
             )}
           >
             <div
